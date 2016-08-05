@@ -27,7 +27,7 @@ message <- rtm-client.on MESSAGE
 text = message.file?.initial_comment?.comment or message.text
 return unless text?
 
-return unless config.channels.length is 0 or message.channel in config.channels
+#!return unless config.channels.length is 0 or message.channel in config.channels
 
 text .= replace /^<.+?>:?/ ''
 
