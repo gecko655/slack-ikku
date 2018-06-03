@@ -1,13 +1,8 @@
-FROM node
+FROM node:alpine
 
 MAINTAINER gecko655 <aqwsedrft1234@yahoo.co.jp>
 
 WORKDIR /root
-RUN apt-get update \
-    && apt-get -y upgrade \
-    && apt-get -y dist-upgrade \
-    && apt-get -y autoremove 
-RUN apt-get install -y vim
 
 COPY index.ls .
 COPY package.json .
