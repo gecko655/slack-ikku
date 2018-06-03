@@ -10,4 +10,4 @@ COPY config.docker.json.ls config.json.ls
 RUN npm install
 
 
-CMD forever start -c "npm start" . && forever logs -f 0
+CMD node_modules/forever/bin/forever start -c "npm start" . && node_modules/forever/bin/forever logs -f 0
